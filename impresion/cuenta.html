@@ -1,0 +1,198 @@
+<meta charset="utf-8">
+<title>Cuenta de cobro</title>
+<form id="myForm">
+<div class='receipt'>
+  <div class='paper'>
+    <h1>CUENTA DE COBRO</h1>
+    <div class='event'><input></div>
+    
+    &nbsp;
+    <div class='event'><input placeholder="Deudor" class="mayus" name="deudor" id="deudor"></div>
+    <div class='event'><input value="C.C. No. " name="cc" id="cc"></div>
+    &nbsp;
+    <div class='event'>DEBE A</div>
+    &nbsp;
+    <div class='event'>JUAN PABLO PÉREZ HERNÁNDEZ</div>
+    <div class='event'>C.C. No. 1.130.673.094</div>
+    &nbsp;
+    <div class='event'>La suma de</div>
+    <div class='event'><input placeholder="Valor" name="valor" id="valor"></div>
+    &nbsp;
+    <div class='event'>Por concepto de:</div>
+    <div class='event'><textarea placeholder="Concepto del cobro" class="autoresizing" rows="1" name="concepto" id="concepto"></textarea></div>
+    &nbsp;
+    <!--<div class='event'><img alt='QRCode' style='width: 70%; margin-bottom: 24px;' src='https://barcode.tec-it.com/barcode.ashx?data=suuJOqwZde7ilk3uMkK7fAhMdVLTqAXuzrIXJdGsqQd7cW2wfQCfqBy7I2kr&code=GS1QRCode&translate-esc=true&eclevel=L'/></div>-->
+    <div class='event'><img class="image-1" id="qr" alt='QRCode' style='width: 70%; margin-bottom: 24px;' src='nequiqr.svg'/></div>
+    <div class='event'>Favor consignar en:</div>
+    <div class='event show-image-1'>Cuenta de ahorros Nequi: 3148811167.</div>
+    &nbsp;<br>
+    &nbsp;<br>
+    &nbsp;<br>
+    <div class='event'><img class="image-2" id="firma" alt='Firma' style='width: 70%; margin-bottom: -60px;' src='firma.svg'/></div>
+    <div class='event' style='margin-bottom: 24px;'>__________________________</div>
+    <div class='event show-image-2'>JUAN PABLO PÉREZ HERNÁNDEZ</div>
+    <div class='event'>C.C. No. 1.130.673.094</div>
+    <div class='event'>Tel: 314 881 1167</div>
+    <button type="submit">Enviar</button>
+</div>
+</form>
+
+<style type="text/css">
+/*@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  /*height: 100vh;*/
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /*font: 72px/1.5 VT323, monospace;*/
+  font: 52px/1.5 'Space Mono', monospace;
+}
+input, samp, textarea {
+  /*font: 72px/1.5 VT323, monospace;*/
+  font: 52px/1.5 'Space Mono', monospace;
+  width: 80%;
+  text-align: center;
+  border: 0;
+}
+button {display: none;}
+
+.mayus {
+  text-transform: uppercase;
+}
+.image-1, .image-2 {display: none;}
+
+.receipt {
+  width: 100%;
+  /*box-shadow: 0 0.2em 1em 0.2em rgba(0, 0, 0, 0.2);*/
+  border: 1px dotted white;
+  border-width: 1px 0;
+}
+.receipt .paper {
+  padding: 3em 0.2em;
+  background: white;
+}
+.receipt h1 {
+  font-size: 180%;
+  margin: 0;
+}
+.receipt h1,
+.receipt .event {
+  text-align: center;
+  line-height: 1;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
+
+<script type="text/javascript">
+
+/* FECHA AUTOMÁTICA */
+var fecha = new Date();
+var options = { year: 'numeric', month: 'long', day: 'numeric' };
+samps = document.querySelectorAll('input');
+
+samps[0].value = fecha.toLocaleDateString("es-ES", options);
+
+
+/* ALTURA DEL TEXTAREA */
+textarea = document.querySelector(".autoresizing");
+textarea.addEventListener('input', autoResize, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+    autoResize.call(textarea);
+});
+
+function autoResize() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+}
+
+$(document).ready(function() {
+  $(".show-image-1").click(function() {
+    $(".image-1").css('display', 'inline');
+  });
+  $(".image-1").click(function() {
+    $(".image-1").css('display', 'none');
+  });
+
+  $(".show-image-2").click(function() {
+    $(".image-2").css('display', 'inline');
+  });
+  $(".image-2").click(function() {
+    $(".image-2").css('display', 'none');
+  });
+});
+
+
+</script>
+
+<script>
+  // Obtener los parámetros de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // Verificar si los parámetros existen y asignarlos a las variables
+  const deudor = urlParams.get('deudor');
+  const cc = urlParams.get('cc');
+  const valor = urlParams.get('valor');
+  const concepto = urlParams.get('concepto');
+
+  const qr = urlParams.get('qr');
+  const firma = urlParams.get('firma');
+
+  // Llenar los campos del formulario con los valores de las variables
+  document.getElementById('deudor').value = deudor;
+  document.getElementById('cc').value = cc;
+  document.getElementById('valor').value = valor;
+  document.getElementById('concepto').value = concepto;
+
+  const imageQr = document.getElementById('qr');
+  const imageFirma = document.getElementById('firma');
+
+  if (qr === 'si') {
+    imageQr.style.display = 'inline';
+  } else if (qr === 'no') {
+    imageQr.style.display = 'none';
+  }
+  if (firma === 'si') {
+    imageFirma.style.display = 'inline';
+  } else if (firma === 'no') {
+    imageFirma.style.display = 'none';
+  }
+
+
+  //----------------------------------------------------------------------
+
+
+  // Agregar un evento al formulario para que se envíe al hacer clic en el botón de enviar
+  document.getElementById('myForm').addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevenir la acción predeterminada del formulario
+
+  // Obtener los valores de los campos del formulario
+  const formDeudor = document.getElementById('deudor').value;
+  const formCc = document.getElementById('cc').value;
+  const formValor = document.getElementById('valor').value;
+  const formConcepto = document.getElementById('concepto').value;
+
+  // Crear una nueva URL con los nuevos parámetros
+  const url = new URL(window.location.href);
+  url.searchParams.set('deudor', formDeudor);
+  url.searchParams.set('cc', formCc);
+  url.searchParams.set('valor', formValor);
+  url.searchParams.set('concepto', formConcepto);
+
+  // Actualizar la URL con los nuevos parámetros
+  window.history.pushState({}, '', url);
+
+  // Recargar la página
+  window.location.reload();
+});
+</script>

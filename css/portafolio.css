@@ -1,0 +1,152 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+.proy-cont {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 370px;
+  overflow: hidden; }
+  @media screen and (min-width: 600px) {
+    .proy-cont {
+      width: 50%; } }
+  @media screen and (min-width: 1050px) {
+    .proy-cont {
+      width: 25%; } }
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+    .proy-cont {
+      height: 250px; } }
+  @media screen and (min-width: 1050px) and (max-width: 1249px) {
+    .proy-cont {
+      height: 200px; } }
+  @media screen and (min-width: 1250px) {
+    .proy-cont {
+      height: 290px; } }
+
+.proy-titulo a {
+  color: #ffffff;
+}
+
+.proy-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (min-width: 600px) {
+    .proy-img {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      -webkit-transition-property: filter, -webkit-transform;
+      -moz-transition-property: filter, -moz-transform;
+      transition-property: filter, transform;
+      -webkit-transition-duration: 500ms;
+      -moz-transition-duration: 500ms;
+      transition-duration: 500ms;
+      -webkit-transform: scale(1) rotate(0deg);
+      -moz-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+      -o-transform: scale(1) rotate(0deg);
+      transform: scale(1) rotate(0deg); }
+      .proy-img.blur {
+        -webkit-transition-duration: 1000ms;
+        -moz-transition-duration: 1000ms;
+        transition-duration: 1000ms;
+        -webkit-transition-timing-function: ease-out;
+        -moz-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+        -webkit-transform: scale(1.2) rotate(-5deg);
+        -moz-transform: scale(1.2) rotate(-5deg);
+        -ms-transform: scale(1.2) rotate(-5deg);
+        -o-transform: scale(1.2) rotate(-5deg);
+        transform: scale(1.2) rotate(-5deg); } }
+
+.proy-blur {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(209, 90, 0, 0.8); }
+  @media screen and (min-width: 600px) {
+    .proy-blur {
+      background-color: rgba(0, 0, 0, 0.4); } }
+
+.proy-hover {
+  text-align: left;
+  position: absolute;
+  left: 2em;
+  bottom: 2em;
+  z-index: 2;
+  padding-right: 1em;
+  color: #fff; }
+  .proy-hover .proy-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    transition-duration: 500ms;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    transition-delay: 150ms;
+    -webkit-transform: translateX(-150%);
+    -moz-transform: translateX(-150%);
+    -ms-transform: translateX(-150%);
+    -o-transform: translateX(-150%);
+    transform: translateX(-150%);
+    opacity: 0; }
+    .proy-hover .proy-item.show {
+      -webkit-transition-duration: 250ms;
+      -moz-transition-duration: 250ms;
+      transition-duration: 250ms;
+      -webkit-transition-timing-function: ease-in;
+      -moz-transition-timing-function: ease-in;
+      transition-timing-function: ease-in;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1; }
+  .proy-hover h2 {
+    margin: 0.5em 0; }
+  .proy-hover .proy-titulo {
+    -webkit-transition-delay: 0ms;
+    -moz-transition-delay: 0ms;
+    transition-delay: 0ms; }
+  .proy-hover .proy-cliente {
+    color: #fff;
+    font-weight: 600;
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    transition-delay: 50ms; }
+    .proy-hover .proy-cliente a {
+      color: #fff;
+      font-weight: 300; }
+  .proy-hover .proy-tags {
+    margin: 0.2em 0;
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms; }
+    .proy-hover .proy-tags tag {
+      display: block;
+      line-height: 1.2;
+      font-size: 10pt;
+      /*padding: 4px;
+      border-radius: 2px;
+      background-color: #fff;*/
+      color: #f2f2f2; }
+  .proy-hover .proy-ano {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    transition-delay: 150ms; }
+  .proy-hover p {
+    margin: 0; }
+

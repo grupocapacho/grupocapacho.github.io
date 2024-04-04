@@ -1,0 +1,221 @@
+body {
+	margin: 0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #506368;
+}
+
+.seccion {
+	width: 100% !important;
+}
+.gris {
+	background: #f6f6f6;
+}
+
+.lead {
+  font-size: 18px;
+}
+
+#portada {
+	background-image: url("../img/portada.png");
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 110px;
+}
+
+#portafolio {
+	background-color: #f6f6f6;
+	padding-bottom: 100px;
+}
+
+#portafolio .boton {
+	display: inline-block;
+	background: #fe6e00;
+	padding: 12px;
+	color: #ffffff !important;
+	font-size: 14pt;
+}
+#portafolio .boton:hover {
+	-webkit-box-shadow: inset 0px -7px 0px 0px rgba(255, 255, 255, 0.34);
+	-moz-box-shadow:    inset 0px -7px 0px 0px rgba(255, 255, 255, 0.34);
+	box-shadow:         inset 0px -7px 0px 0px rgba(255, 255, 255, 0.34);
+	padding-bottom: 19px;
+}
+
+#quiensoy {
+	background: transparent;
+	color: #ffffff;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+#quiensoy .boton {
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.2);;
+	padding: 12px;
+	color: #ffffff !important;
+	font-size: 14pt;
+}
+#quiensoy .boton:hover {
+	-webkit-box-shadow: inset 0px -7px 0px 0px rgba(255, 255, 255, 0.34);
+	-moz-box-shadow:    inset 0px -7px 0px 0px rgba(255, 255, 255, 0.34);
+	box-shadow:         inset 0px -7px 0px 0px rgba(255, 255, 255, 0.34);
+	padding-bottom: 19px;
+}
+
+.perfil-foto img {
+	width: 100%;
+	-webkit-box-shadow: 2px 2px 0 7px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 0 7px rgba(0,0,0,0.2);
+}
+.perfil-texto {
+	text-align: justify;
+}
+
+.perfil-texto h1 {
+	margin: 0;
+}
+
+#nombre {
+	font-size: 30pt;
+	padding-top: 10px;
+	/*text-shadow:2px 2px 0 rgba(0,0,0,0.3);*/
+}
+#dmi {
+	font-size: 15pt;
+	padding-top: 10px;
+	/*text-shadow:2px 2px 0 rgba(0,0,0,0.3);*/
+}
+
+#iniciar {
+	padding: 5px;
+	text-decoration: none;
+	margin-top: 20px;
+	-webkit-border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px;
+
+	background: rgba(255, 255, 255, 0.2);
+	border-bottom: 2px solid #fff;
+	color: #fff;
+}
+
+body, #logo, #nombre, #dmi, #iniciar {
+	opacity: 0;
+}
+
+a:link, a:visited {
+	color: #fe6e00;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #FD8513;
+}
+
+#cargando {
+	color: #fe6e00;
+	text-align: center;
+	font-size: 14pt;
+	font-weight: bolder;
+	opacity: 1;
+}
+#cuerpo {
+	display: none;
+	opacity: 0;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+ul.nav li{
+  display: inline-block;
+  margin-left: 23px;
+  padding: 15px 0;
+  font-weight: bold;
+}
+ul.nav li a {
+	color: #fff;
+	padding: 5px;
+	-webkit-border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px;
+}
+ul.nav li a.activo{
+	/*color: #fe6e00;
+	background: #fff;
+	color: #fe6e00;*/
+	border-bottom: 2px solid #fff;
+	
+}
+ul.nav li a:hover{
+	background: rgba(255, 255, 255, 0.3);
+	}
+#menu, ul.nav li a {
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+
+.flechas {
+	position: relative; bottom: 10px; right: 10px;
+}
+.flechas a {
+	font-size: 14pt;
+	color: #506368;
+	border: 2px solid #506368;
+	border-radius: 23px;
+	padding: 5px;
+	width: 20px;
+}
+
+::-moz-selection {
+       background-color: #FFB64F;
+       color: #fe6e00;
+}
+::selection {
+       background-color: #FFB64F;
+       color: #fe6e00;
+}
+
+/*-------------- Media queries --------------*/
+
+@media all and (max-width: 767px) { /* XS - Menor que 767px */
+	.col2 {
+		-webkit-column-count: 2;
+		-webkit-column-gap: 10px; 
+		-moz-column-count: 2;
+		-moz-column-gap: 10px;  
+		column-count: 2;
+		column-gap: 10px; 
+		
+		text-align: justify;
+
+	}
+	.flechas {display: none;}
+
+	.perfil-foto img {
+		max-width: 200px;
+	}
+
+	.perfil-texto{
+		text-align: center;
+	}
+	/*#logo img {width: 100px;}*/
+
+}
+
+
+@media (max-width: 992px) and (min-width: 768px) { /* SM - Menor que 979px y mayor que 767px */
+	#logo img {width: 90px;}
+	
+}
+
+@media (max-width: 1200px) and (min-width: 993px) { /* MD - Menor que 979px y mayor que 767px */
+	#logo img {width: 75px;}	
+}
+
+@media all and (min-width: 1201px) { /* LG */
+	#logo img {width: 50px;}
+}

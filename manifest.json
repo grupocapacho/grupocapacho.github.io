@@ -1,0 +1,15 @@
+{
+  "name": "lorspi",
+  "short_name": "lorspi",
+  "lang": "en-US",
+  "start_url": "app.html",
+  "display": "standalone",
+  "theme_color": "#dfdfdf",
+  "icons": [
+    {
+      "src": "img/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+
+<meta charset="utf-8">
+<div class='receipt'>
+<div class='paper'>
+
+&nbsp;<br>
+<div class='event'><textarea placeholder="Notas" class="autoresizing" rows="1"></textarea></div>
+&nbsp;
+<!--<div class='event'>JUAN PABLO PÉREZ HERNÁNDEZ</div>
+<div class='event'>C.C. No. 1.130.673.094</div>-->
+</div>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /*font: 72px/1.5 VT323, monospace;*/
+  font: 52px/1.5 'Space Mono', monospace;
+}
+input, samp, textarea {
+  /*font: 72px/1.5 VT323, monospace;*/
+  font: 52px/1.5 'Space Mono', monospace;
+  width: 100%;
+  text-align: center;
+  border: 0;
+  text-align: left;
+}
+
+.mayus {
+  text-transform: uppercase;
+}
+
+.receipt {
+  width: 100%;
+  box-shadow: 0 0.2em 1em 0.2em rgba(0, 0, 0, 0.2);
+  border: 1px dotted white;
+  border-width: 1px 0;
+  height: 95%;
+}
+.receipt .paper {
+  padding: 0.2em 0.2em;
+  background: white;
+}
+
+.receipt h1,
+.receipt .event {
+  text-align: center;
+  line-height: 1.5;
+}
+
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
+<script type="text/javascript">
+
+
+/* ALTURA DEL TEXTAREA */
+textarea = document.querySelector(".autoresizing");
+textarea.addEventListener('input', autoResize, false);
+
+function autoResize() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+}
+
+
+</script>

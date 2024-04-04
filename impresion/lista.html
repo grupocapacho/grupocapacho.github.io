@@ -1,0 +1,250 @@
+<meta charset="utf-8">
+<svg style="display: none">
+  <symbol id="bin-icon" height="50" width="50" viewBox="0 0 100 100">
+   <path style="fill:#f0f1f2" d="m20.651 2.3339c-.73869 0-1.3312.59326-1.3312 1.3296v2.5177h-6.3634c-.73887 0-1.3314.59331-1.3314 1.3295v1.1888c0 .73639.59249 1.3289 1.3312 1.3289h7.6948 8.8798 7.6948c.73869 0 1.3312-.59249 1.3312-1.3289v-1.1888c0-.73639-.59249-1.3296-1.3312-1.3296h-6.3634v-2.5177c0-.73639-.59249-1.3296-1.3312-1.3296h-8.8798zm-5.6786 11.897c-1.7775 0-3.2704 1.4889-3.2704 3.274v27.647c0 1.7775 1.4928 3.2704 3.2704 3.2704h20.783c1.7775 0 3.2704-1.4928 3.2704-3.2704v-27.647c0-1.7852-1.4928-3.274-3.2704-3.274h-20.783zm1.839 3.4895h1.1696c.73869 0 1.3389.60018 1.3389 1.3466v24.247c0 .74638-.60018 1.3389-1.3389 1.3389h-1.1696c-.73869 0-1.3389-.59249-1.3389-1.3389v-24.247c0-.74638.60018-1.3466 1.3389-1.3466zm7.6948 0h1.1696c.73869 0 1.3389.60018 1.3389 1.3466v24.247c0 .74638-.60018 1.3389-1.3389 1.3389h-1.1696c-.73869 0-1.3389-.59249-1.3389-1.3389v-24.247c0-.74638.60018-1.3466 1.3389-1.3466zm7.6948 0h1.1696c.73869 0 1.3389.60018 1.3389 1.3466v24.247c0 .74638-.60018 1.3389-1.3389 1.3389h-1.1696c-.73869 0-1.3389-.59249-1.3389-1.3389v-24.247c0-.74638.60018-1.3466 1.3389-1.3466z"/>
+  </symbol>
+</svg>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: calc(1em + 1vw);
+  font: 24px/1.5 'Space Mono', monospace;
+}
+
+
+body {
+  /*max-width: 20rem;
+  display: flex;*/
+  padding: 0.5rem;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul:empty, .empty-state {
+  display: none;
+}
+
+ul:empty + .empty-state {
+  display: block;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tick {
+  display: inline-block;
+  width: 0.66rem;
+  height: 0.66rem;
+  border: 0.125rem solid;
+  margin-right: 0.25rem;
+  border-radius: 0.125rem;
+}
+
+[type="checkbox"]:checked +  label .tick {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSI1MCIgd2lkdGg9IjUwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgdmlld0JveD0iMCAwIDUwLjAwMDAwMSA1MC4wMDAwMDEiPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0xMDAyLjQpIj4gIDxyZWN0IHN0eWxlPSJzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOiMxYTFhMWE7c3Ryb2tlLXdpZHRoOjMuNDQ1MztzdHJva2UtbGluZWNhcDpyb3VuZDtmaWxsOiMxYTFhMWEiIHRyYW5zZm9ybT0ibWF0cml4KC44ODc1OSAuNDYwNjQgLS40NTEyNyAuODkyMzkgMCAwKSIgcnk9IjEuMTUwNCIgaGVpZ2h0PSIzMS42OTEiIHdpZHRoPSI1Ljk5MyIgeT0iODgyLjcxIiB4PSI0ODcuMTkiLz4gIDxyZWN0IHN0eWxlPSJzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlOiMxYTFhMWE7c3Ryb2tlLXdpZHRoOjMuMTM5MjtzdHJva2UtbGluZWNhcDpyb3VuZDtmaWxsOiMxYTFhMWEiIHRyYW5zZm9ybT0icm90YXRlKDI3LjA4NSkiIHJ5PSIuOTExNjkiIGhlaWdodD0iNi4yNzgyIiB3aWR0aD0iMTguODM1IiB5PSI5MTEuMjIiIHg9IjQ3OC42MiIvPiA8L2c+PC9zdmc+);
+  background-repeat: none;
+  background-position: center;
+  background-size: 100%;
+}
+
+[type="checkbox"]:checked + label .text {
+  text-decoration: line-through;
+}
+
+li label {
+  flex: 2;
+}
+
+li + li {
+  margin-top: 0.55rem;
+}
+
+button {
+  margin: 0;
+  line-height: 1;
+  border: 0;
+  
+}
+
+li button {
+  border: 0;
+  padding: 0;
+  background: 0;
+}
+
+button svg {
+  width: 1.125em;
+  height: 1.125em;
+}
+
+form {
+  margin-top: 1rem;
+  /*display: flex;*/
+}
+
+input, [type="submit"] {
+  border: 0;
+  border-radius: 0.125rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+[type="text"] {
+  flex: 3;
+  margin-right: 0.25rem;
+}
+
+[type="submit"] {
+  background: #000;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #000;
+  display: none;
+}
+
+[type="submit"][disabled] {
+  opacity: 0.33;
+}
+
+::-webkit-input-placeholder { 
+  color: #444;
+  font-style: italic;
+}
+::-moz-placeholder { 
+  color: #444;
+  font-style: italic;
+}
+:-ms-input-placeholder { 
+  color: #444;
+  font-style: italic;
+}
+:-moz-placeholder { 
+  color: #444;
+  font-style: italic;
+}
+
+input:focus, button:focus, [type="checkbox"]:focus + label .tick {
+  outline: none;
+  box-shadow: 0 0 0 0.125rem #2a7fff;
+}
+
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+.vh {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.smaller {
+  font-size: 0.75rem;
+}
+</style>
+
+<section id="component" aria-labelledby="todos-label">
+  <form @submit="add">
+    <label for="add" class="vh">
+      Write a new todo item
+    </label>
+    <input type="text" id="add" v-model="workingName" placeholder="Lista" :aria-invalid="validity">
+    <button type="submit" :disabled="validity">Add</button>
+  </form>
+  <ul>
+    <li v-for="(todo, index) in todos">
+      <input type="checkbox" :id="`todo-${index}`" v-model="todo.done" class="vh">
+      <label :for="`todo-${index}`">
+        <span class="tick"></span>
+        <span class="text">{{todo.name}}</span>
+      </label>
+      <button @click="remove(index, todo.name)" :aria-label="`delete ${todo.name}`">
+        <svg><use xlink:href="#bin-icon"></use></svg>
+      </button>
+    </li>
+  </ul>
+  <div class="empty-state">
+    <p>Lista vacía</p>
+  </div>
+  
+  <div role="status" class="vh">
+    {{feedback}}
+  </div>
+</section>
+
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+
+<script type="text/javascript">
+  var app = new Vue({
+  el: '#component',
+  data: {
+    todos: [
+     {
+       name: 'Elemento 1',
+       done: false
+     },
+     {
+       name: 'Elemento 2',
+       done: false
+     },
+     {
+       name: 'Elemento 3',
+       done: false
+     }
+    ],
+    workingName: '',
+    feedback: ''
+  },
+  methods: {
+    add(e) {
+      e.preventDefault();
+      this.todos.push({
+        name: this.workingName,
+        done: false
+      });
+      this.feedback = `${this.workingName} added`;
+      this.workingName = '';
+    },
+    remove(index, name) {
+      this.todos.splice(index, 1);
+      document.getElementById('todos-label').focus();
+      this.feedback = `${name} deleted`;
+    }
+  },
+  computed: {
+    validity() {
+      return this.workingName.trim() === '';
+    }
+  }
+});
+</script>

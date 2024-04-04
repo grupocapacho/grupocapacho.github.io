@@ -1,0 +1,121 @@
+
+<meta charset="utf-8">
+<div class='receipt'>
+<div class='paper'>
+<h1 id="toggle">CHECKLIST DE SALIDA</h1>
+<div class='event'><input></div>
+&nbsp;
+
+<div class='event completo'>&nbsp;___ Estufa</div>
+<div class='event completo'>&nbsp;___ Llave del gas</div>
+<div class='event completo'>&nbsp;___ Lavaplatos</div>
+<div class='event completo'>&nbsp;___ Ventanas</div>
+<div class='event completo'>&nbsp;___ Llaves del baño</div>
+<div class='event completo'>&nbsp;___ Electrónicos</div>
+<div class='event completo'>&nbsp;___ Luces</div>
+<div class='event completo'>&nbsp;___ Puertas</div>
+<div class='event completo'>&nbsp;___ Cargador</div>
+&nbsp;<br>
+<div class='event' data-bind="visible: checkIfShow()">Observaciones</div>
+<div class='event'><textarea data-bind="visible: checkIfShow()" placeholder="Observaciones" class="autoresizing" rows="1"></textarea></div>
+&nbsp;
+<!--<div class='event' style='margin-bottom: 24px;'>_______________________</div>
+<div class='event'>JUAN PABLO PÉREZ HERNÁNDEZ</div>
+<div class='event'>C.C. No. 1.130.673.094</div>-->
+</div>
+<style type="text/css">
+/*@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  /*height: 100vh;*/
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /*font: 72px/1.5 VT323, monospace;*/
+  font: 52px/1.5 'Space Mono', monospace;
+}
+input, samp, textarea {
+  /*font: 72px/1.5 VT323, monospace;*/
+  font: 52px/1.5 'Space Mono', monospace;
+  width: 100%;
+  text-align: center;
+  border: 0;
+  text-transform:capitalize;
+}
+
+.mayus {
+  text-transform: uppercase;
+}
+
+.receipt {
+  width: 100%;
+  box-shadow: 0 0.2em 1em 0.2em rgba(0, 0, 0, 0.2);
+  border: 1px dotted white;
+  border-width: 1px 0;
+}
+.receipt .paper {
+  padding: 3em 0.2em;
+  background: white;
+}
+.receipt h1 {
+  font-size: 150%;
+  margin: 0;
+}
+.receipt h1,
+.receipt .event {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.completo {
+  width: 100%;
+  text-align: left !important;
+  line-height: 2 !important;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
+<script type="text/javascript">
+
+/* FECHA AUTOMÁTICA */
+var fecha = new Date();
+var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'};
+//var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'};
+samps = document.querySelectorAll('input');
+
+samps[0].value = fecha.toLocaleDateString("es-ES", options);
+
+
+/* ALTURA DEL TEXTAREA */
+textarea = document.querySelector(".autoresizing");
+textarea.addEventListener('input', autoResize, false);
+
+function autoResize() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+}
+
+
+/* MOSTRAR OCULTAR */
+var viewModel = new function ViewModel() {
+this.shouldShow = ko.observable(false);
+
+this.checkIfShow = function() {
+    return this.shouldShow();
+  };
+};
+
+ko.applyBindings(viewModel);
+
+$('#toggle').on('click', function() {
+  viewModel.shouldShow(!viewModel.shouldShow());
+});
+
+</script>
