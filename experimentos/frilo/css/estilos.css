@@ -1,0 +1,40 @@
+body {
+  /* Evitar recargar arrastrando hacia abajo. */
+  overscroll-behavior: none; 
+  -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+}
+input,
+textarea {
+     -moz-user-select: text;
+}
+.brand-logo {
+  font-size: 14pt !important;
+  height: inherit;
+  overflow: hidden;
+}
+a {color: #283593;}
+.tabs .tab a:hover, .tabs .tab a.active, .tabs .tab a {
+  background-color: transparent;
+  color: #283593;
+}
+.tabs .indicator {background-color: #283593;}
+button {width: 100%;}
+label.active {color: #283593 !important;}
+.swal-button {background-color: #ff8f00 !important;}
+input[type=number]:focus {
+  border-bottom: 1px solid #283593 !important;
+  box-shadow: 0 1px 0 0 #283593 !important;
+}
+.enlace-tarjeta {
+    color: #ffc046;
+    margin-right: 24px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+    line-height: 2;
+}
+.card-content .material-icons {margin-left: 24px;}
+#sidenav-overlay {z-index: 200 !important;}
+.side-nav {z-index: 400 !important;}

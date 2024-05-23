@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <title>Frileo</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="img/ico/favicon.png" type="image/x-icon">
+  <link href="img/ico/57.png" rel="apple-touch-icon" />
+  <link href="img/ico/76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="img/ico/120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="img/ico/152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="img/ico/180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="img/ico/192.png" rel="icon" sizes="192x192" />
+  <link href="img/ico/128.png" rel="icon" sizes="128x128" />
+  <link href="css/materialize.min.css" rel="stylesheet" media="screen">
+  <link href="css/estilos.css" rel="stylesheet" media="screen">
+  <link href="css/material-icons.css" rel="stylesheet">
+  <!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+  <!-- Quitar barra de direcciones en modo app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- Color de la barra de chrome mobile -->
+  <meta name="msapplication-TileColor" content="#001064 ">
+  <meta name="theme-color" content="#001064 ">
+</head>
+
+<body>
+  <style>
+  
+  </style>
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper indigo darken-1">
+      <a href="#" class="brand-logo">Calcular tiempo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li><div class="user-view indigo darken-3">
+      <a href="acerca.html"><img src="img/logo-blanco.png" width="80%"></a>
+    </div></li>
+        <li class="active"><a href="index.html">Calcular presupuesto</a></li>
+        <li><a href="tiempo.html">Calcular tiempo</a></li>
+        <li><a href="ajustes.html">Ajustes</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div id="contenido" style="opacity: 0;">
+
+<div class="nav-content">
+  <ul class="tabs">
+    <li class="tab"><a class="active" href="#tab1">Cálculos</a></li>
+    <li class="tab"><a href="#tab2">Detalles</a></li>
+  </ul>
+</div>
+<br>
+
+<div id="tab1" class="col s12">
+<div class="container">
+
+  <div class="card light-green darken-1 white-text" id="pago">
+    <div class="card-content" id="txt-pago">
+      <a href="#" class="secondary-content tooltipped" data-position="bottom" data-tooltip="Este es el total que debes cobrarle a tu cliente."><i class="material-icons white-text" id="ico-pago">help_outline</i></a>
+      <a href="#" class="secondary-content" data-position="bottom" onclick="copyToClipboard('pagototal')"><i class="material-icons white-text">filter_none</i></a>
+      <span class="card-title" id="pagototal">0</span>
+      <p>Pago total</p>
+    </div>
+  </div>
+
+
+  <div class="card-panel amber lighten-4" id="textosalariominimo">
+    <span class="black-text">Cuando tus ingresos mensuales son inferiores al salario mínimo, no estás obligado a pagar aportes.</span>
+  </div>
+
+  
+  <div class="card light-green darken-4" id="ganancia">
+    <div class="card-content white-text">
+      <a href="#" class="secondary-content tooltipped" data-position="bottom" data-tooltip="Este es lo que ganarás después de pagar aportes. Más información en la pestaña detalles."><i class="material-icons white-text">help_outline</i></a>
+      <a href="#" class="secondary-content" data-position="bottom" onclick="copyToClipboard('gananciaproveedor')"><i class="material-icons white-text">filter_none</i></a>
+      <span class="card-title" id="gananciaproveedor">0</span>
+      <p>Ganancia total</p>
+    </div>
+  </div>
+
+  <div class="row" id="resultados">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content black-text">
+          <a href="ajustes.html" class="secondary-content"><i class="material-icons black-text">edit</i></a>
+          <span class="card-title" id="preciohora">0</span>
+          <p>Valor de la hora</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="espacio"></div>
+
+  <div class="input-field">
+    <input id="horas" type="number">
+    <label for="horas">Cantidad de horas</label>
+  </div>
+  
+  <div class="row">
+    <div class="col s6"><button class="waves-effect waves-light btn amber darken-3" type="button" id="calcular">Calcular</button></div>
+    <div class="col s6"><button class="waves-effect waves-light btn amber darken-3" type="button" id="resetear">Reestablecer</button></div>
+  </div>
+
+  
+  </div>
+  </div>
+
+<div id="tab2" class="col s12">
+  <div class="container">
+    <div class="row" id="predetalles">
+      <div class="col s12 m5"> 
+        <div class="card-panel amber lighten-4">
+          <span class="black-text">Debes hacer el cálculo en la primera pestaña para generar todos los detalles.</span>
+        </div>
+      </div>
+  </div>
+  
+  <div class="row" id="detallesingresos">
+    <div class="col s12 m8 l9 card">
+      <table>
+        <thead>
+          <tr><td>Detalle de ingresos</td></tr>
+        </thead>
+        <tbody>
+          <!--<tr>
+            <td><b>Ingreso base</b></td>
+            <td id="ingresobase" class="right-align">0</td>
+          </tr>-->
+          <tr>
+            <td><b>Margen Imprevistos (15%)</b></td>
+            <td id="totalmargen" class="right-align">0</td>
+          </tr>
+          <tr>
+            <td><b>Pago a dos cuotas (50%)</b></td>
+            <td id="pagoparcial" class="right-align">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row" id="detallesaportes">
+    <div class="col s12 m8 l9 card">
+      <table>
+        <thead>
+          <tr><td>Detalle de aportes</td></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Base cotizacion (40%)</b></td>
+            <td id="basecotizacion" class="right-align">0</td>
+          </tr>
+          <tr>
+            <td><b>EPS (12,5%)</b></td>
+            <td id="eps" class="right-align">0</td>
+          </tr>
+          <tr>
+            <td><b>Pensión (16%)</b></td>
+            <td id="pension" class="right-align">0</td>
+          </tr>
+          <tr>
+            <td><b>ARL (0,522%)</b></td>
+            <td id="arl" class="right-align">0</td>
+          </tr>
+          <tr>
+            <td><b>Total aportes</b></td>
+            <td id="totalaportes" class="right-align">0</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+  </div> 
+  </div>
+  
+</div>
+
+</div>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  resetear();
+  $('#contenido').delay(100).fadeTo( "slow", 1 );
+
+  // Si se ha escrito la variable en localstorage, la toma, de lo contrario la escribe.
+  var preciohora = localStorage.getItem("preciohora");
+  if(preciohora == null) {
+    preciohora = 25000;
+    localStorage.setItem("preciohora", preciohora);
+  } else {
+    preciohora = parseInt(preciohora);
+  }
+  document.getElementById("preciohora").innerHTML = '$'+formatNumber(preciohora.toFixed(0));
+
+
+  //Limitar valores del input
+  $('input').on('input', function () {    
+      var value = $(this).val();    
+      if ((value !== '') && (value.indexOf('.') === -1)) {        
+          $(this).val(Math.max(Math.min(value, 10000), 0));
+      }
+  });
+
+
+});
+//Calculadora
+function ejecutarCalculo() {
+  //Tomar valores
+  var horas = document.getElementById("horas").value;
+  var preciohora = localStorage.getItem("preciohora");
+  var salariominimo = 828116;
+
+  //Validar entrada
+  if (horas === "") {
+    swal({text: "Verifica que los campos estén llenos.",   
+    icon: "warning",   
+    button: "Entendido"});   
+    return;
+  };
+
+  //Hacer calculos
+  var ingresobase = horas * preciohora;
+  var totalmargen = ingresobase * 0.15;
+  var pagototal = ingresobase + totalmargen;
+  var pagoparcial = pagototal/2;
+  
+  var basecotizacion = pagototal * 0.4;
+  var eps = basecotizacion * 0.125;
+  var pension = basecotizacion * 0.16;
+  var arl = basecotizacion * 0.00522;
+  var totalaportes = (eps + pension + arl);
+  var gananciaproveedor = pagototal - totalaportes;
+
+  //Valida si el pago total es superior al salario mínimo.
+  if (pagototal > salariominimo) {
+    resetear();
+    document.getElementById("horas").value = horas;
+    document.getElementById("ganancia").style.display = "block";
+    document.getElementById("detallesaportes").style.display = "block"; 
+
+    /*$("#pago").removeClass("light-green");
+    $("#txt-pago").removeClass("white-text").addClass("black-text");
+    $("#ico-pago").removeClass("white-text").addClass("black-text"); */
+
+  } else {
+    resetear();
+    document.getElementById("horas").value = horas;
+    document.getElementById("textosalariominimo").style.display = "block";
+
+    /*$("#pago").addClass( "light-green");
+    $("#txt-pago").removeClass("black-text").addClass("white-text");
+    $("#ico-pago").removeClass("black-text").addClass("white-text");*/
+  };
+    
+  //Escribir
+  /*document.getElementById("ingresobase").innerHTML = '$'+formatNumber(ingresobase.toFixed(0));*/
+  document.getElementById("totalmargen").innerHTML = '$'+formatNumber(totalmargen.toFixed(0));
+  document.getElementById("pagototal").innerHTML = '$'+formatNumber(pagototal.toFixed(0));
+  document.getElementById("pagoparcial").innerHTML = '$'+formatNumber(pagoparcial.toFixed(0));
+  document.getElementById("basecotizacion").innerHTML = '$'+formatNumber(basecotizacion.toFixed(0));
+  document.getElementById("eps").innerHTML = '$'+formatNumber(eps.toFixed(0));
+  document.getElementById("pension").innerHTML = '$'+formatNumber(pension.toFixed(0));
+  document.getElementById("arl").innerHTML = '$'+formatNumber(arl.toFixed(0));
+  document.getElementById("totalaportes").innerHTML = '$'+formatNumber(totalaportes.toFixed(0));
+  document.getElementById("gananciaproveedor").innerHTML = '$'+formatNumber(gananciaproveedor.toFixed(0));
+  
+  //Mostrar tras calcular
+  document.getElementById("pago").style.display = "block";
+  document.getElementById("detallesingresos").style.display = "block";
+  document.getElementById("predetalles").style.display = "none";
+  document.getElementById("espacio").style.display = "block";
+
+};
+
+//Resetear
+function resetear() {
+  document.getElementById("pago").style.display = "none";
+  document.getElementById("ganancia").style.display = "none";
+  document.getElementById("predetalles").style.display = "block";
+  document.getElementById("horas").value = "";
+  document.getElementById("pago").style.display = "none";
+  document.getElementById("ganancia").style.display = "none";
+  document.getElementById("detallesingresos").style.display = "none";
+  document.getElementById("detallesaportes").style.display = "none";
+  document.getElementById("textosalariominimo").style.display = "none";
+  document.getElementById("espacio").style.display = "none";
+
+
+};
+
+//Ejecutar funciones
+document.getElementById("calcular").onclick = function() {
+  ejecutarCalculo();
+};
+
+document.getElementById("resetear").onclick = function() {
+  resetear();
+};
+
+</script>
+</body>
+</html>

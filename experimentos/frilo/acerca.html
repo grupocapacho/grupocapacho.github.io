@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <title>Frileo</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="img/ico/favicon.png" type="image/x-icon">
+  <link href="img/ico/57.png" rel="apple-touch-icon" />
+  <link href="img/ico/76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="img/ico/120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="img/ico/152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="img/ico/180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="img/ico/192.png" rel="icon" sizes="192x192" />
+  <link href="img/ico/128.png" rel="icon" sizes="128x128" />
+  <link href="css/materialize.min.css" rel="stylesheet" media="screen">
+  <link href="css/estilos.css" rel="stylesheet" media="screen">
+  <link href="css/material-icons.css" rel="stylesheet">
+  <!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+  <!-- Quitar barra de direcciones en modo app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- Color de la barra de chrome mobile -->
+  <meta name="msapplication-TileColor" content="#001064 ">
+  <meta name="theme-color" content="#001064 ">
+</head>
+
+<body>
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper indigo darken-1">
+      <a href="#" class="brand-logo">Acerca de la aplicación</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li><div class="user-view indigo darken-3">
+      <a href="acerca.html"><img src="img/logo-blanco.png" width="80%"></a>
+    </div></li>
+        <li><a href="index.html">Calcular presupuesto</a></li>
+        <li><a href="tiempo.html">Calcular tiempo</a></li>
+        <li><a href="ajustes.html">Ajustes</a></li>
+        <li class="active"><a href="acerca.html">Acerca de</a></li>
+      </ul>
+      <!--<ul class="right">
+        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+      </ul>-->
+    </div>
+  </nav>
+</div>
+
+<div id="contenido" style="opacity: 0;">
+
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Frileo v 1.1.7</span>
+        <p>
+        Creada por<br>
+        Juan Pablo Pérez<br><br>
+        <br>
+        <a class="enlace-tarjeta" href="https://www.buymeacoffee.com/lorspi" target="_blank">Invitanos a una cerveza</a><br>
+        <!--<a class="enlace-tarjeta" href="http://lorspi.com" target="_blank">Visita mi portafolio</a><br>
+        <a class="enlace-tarjeta" href="mailto:juan.perez@lorspi.com" target="_blank">Escríbeme</a>-->
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12 m6">
+<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header active">Acerca de la aplicación</div>
+    <div class="collapsible-body">
+      <p>Esta aplicación fue desarrollada por un par de creativos independientes tratando de entender estos temas tributarios tan complicados.</p>
+      <p>Hemos encontrado algunas fórmulas e información para facilitar este tipo de cálculos y decidimos compartirlo con ustedes.</p>
+      <p>Si tienes alguna sugerencia o sabes de algo que esté mal y debamos corregirlo, no dudes en contactarnos en <a href="mailto:frileo@lorspi.com" target="_blank">frileo@lorspi.com</a>.</p>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header">Fuentes de información</div>
+    <div class="collapsible-body">
+      <p><b>Las cifras y cálculos fueron obtenidas de las siguientes fuentes:</b></p>
+      <p>
+        <br>
+        Pago simple<br>
+        Aportes parafiscales<br>
+        <a href="https://pagosimple.com/calcula-tu-pago-aplicativo/" target="_blank">pagosimple.com/calcula-tu-pago-aplicativo</a>
+      </p>
+      <!--<p>
+        Departamento Nacional de planeación<br>
+        Tabla de honorarios de contratos de prestación de servicios profesionales y de apoyo a a gestión.<br>
+        <a href="https://colaboracion.dnp.gov.co/CDT/Contratacion/Tabla%20de%20honorarios%202019.pdf" target="_blank">Tabla de honorarios 2019.pdf</a>
+      </p>-->
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header">Bibliotecas de código abierto</div>
+    <div class="collapsible-body">
+      <p><a href="https://materializecss.com/" target="_blank">Materialize</a></p>
+      <p><a href="https://jquery.com" target="_blank">jQuery</a></p>
+      <p><a href="https://sweetalert2.github.io/" target="_blank">Sweet Alert</a></p>
+    </div>
+  </li>
+  
+</ul>
+</div>
+</div>
+
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  $('#contenido').delay(100).fadeTo( "slow", 1 );
+
+});
+
+</script>
+</body>
+</html>
