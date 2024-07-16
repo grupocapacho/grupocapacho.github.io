@@ -1,0 +1,392 @@
+<style type="text/css">
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.card {
+  width: 350px;
+  height: 480px;
+  padding: 106px 20px 42px 20px;
+}
+.card__img {
+  display: flex;
+  justify-content: center;
+}
+.glitch {
+  position: relative;
+  width: 223px;
+  height: 126px;
+}
+.glitch > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.glitch > svg:nth-child(1) {
+  fill: #00f;
+  -webkit-animation: glitchAnim1 4.5s infinite;
+          animation: glitchAnim1 4.5s infinite;
+}
+.glitch > svg:nth-child(2) {
+  fill: #f00;
+  -webkit-animation: glitchAnim2 4.3s 0.2s infinite;
+          animation: glitchAnim2 4.3s 0.2s infinite;
+}
+.glitch > svg:nth-child(3) {
+  fill: #f00;
+  clip: rect(0, 0, 0, 0);
+  -webkit-animation: glitchAnim3 4.5s steps(1) infinite;
+          animation: glitchAnim3 4.5s steps(1) infinite;
+}
+.glitch > svg:nth-child(4) {
+  fill: #00f;
+  clip: rect(0, 0, 0, 0);
+  -webkit-animation: glitchAnim4 4.3s 0.2s steps(1) infinite;
+          animation: glitchAnim4 4.3s 0.2s steps(1) infinite;
+}
+@-webkit-keyframes glitchAnim1 {
+  0%, 9.9% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%, 19.9% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0);
+  }
+  20%, 29.9% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  30%, 39.9% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  40%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes glitchAnim1 {
+  0%, 9.9% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%, 19.9% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0);
+  }
+  20%, 29.9% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  30%, 39.9% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  40%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes glitchAnim2 {
+  0%, 9.9% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%, 19.9% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  20%, 29.9% {
+    -webkit-transform: translate3d(1px, 0, 0);
+            transform: translate3d(1px, 0, 0);
+  }
+  30%, 39.9% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0);
+  }
+  40%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes glitchAnim2 {
+  0%, 9.9% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%, 19.9% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  20%, 29.9% {
+    -webkit-transform: translate3d(1px, 0, 0);
+            transform: translate3d(1px, 0, 0);
+  }
+  30%, 39.9% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0);
+  }
+  40%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes glitchAnim3 {
+  0% {
+    clip: rect(234px, 235px, 244px, 0px);
+  }
+  5% {
+    clip: rect(58px, 235px, 68px, 0px);
+  }
+  10% {
+    left: -5px;
+    clip: rect(65px, 235px, 75px, 0px);
+  }
+  15% {
+    left: 0;
+    clip: rect(188px, 235px, 198px, 0px);
+  }
+  20% {
+    left: -7px;
+    clip: rect(126px, 235px, 136px, 0px);
+  }
+  25% {
+    left: 4px;
+    clip: rect(184px, 235px, 194px, 0px);
+  }
+  30% {
+    left: 1px;
+    clip: rect(180px, 235px, 190px, 0px);
+  }
+  35% {
+    left: 4px;
+    clip: rect(101px, 235px, 111px, 0px);
+  }
+  40%, 100% {
+    left: 0;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+@keyframes glitchAnim3 {
+  0% {
+    clip: rect(234px, 235px, 244px, 0px);
+  }
+  5% {
+    clip: rect(58px, 235px, 68px, 0px);
+  }
+  10% {
+    left: -5px;
+    clip: rect(65px, 235px, 75px, 0px);
+  }
+  15% {
+    left: 0;
+    clip: rect(188px, 235px, 198px, 0px);
+  }
+  20% {
+    left: -7px;
+    clip: rect(126px, 235px, 136px, 0px);
+  }
+  25% {
+    left: 4px;
+    clip: rect(184px, 235px, 194px, 0px);
+  }
+  30% {
+    left: 1px;
+    clip: rect(180px, 235px, 190px, 0px);
+  }
+  35% {
+    left: 4px;
+    clip: rect(101px, 235px, 111px, 0px);
+  }
+  40%, 100% {
+    left: 0;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+@-webkit-keyframes glitchAnim4 {
+  0% {
+    clip: rect(23px, 235px, 33px, 0px);
+  }
+  5% {
+    clip: rect(224px, 235px, 234px, 0px);
+  }
+  10% {
+    left: -1px;
+    clip: rect(192px, 235px, 202px, 0px);
+  }
+  15% {
+    left: 8px;
+    clip: rect(84px, 235px, 94px, 0px);
+  }
+  20% {
+    left: -10px;
+    clip: rect(154px, 235px, 164px, 0px);
+  }
+  25% {
+    left: -3px;
+    clip: rect(50px, 235px, 60px, 0px);
+  }
+  30% {
+    left: -5px;
+    clip: rect(218px, 235px, 228px, 0px);
+  }
+  35% {
+    left: 2px;
+    clip: rect(185px, 235px, 195px, 0px);
+  }
+  40%, 100% {
+    left: 0;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+@keyframes glitchAnim4 {
+  0% {
+    clip: rect(23px, 235px, 33px, 0px);
+  }
+  5% {
+    clip: rect(224px, 235px, 234px, 0px);
+  }
+  10% {
+    left: -1px;
+    clip: rect(192px, 235px, 202px, 0px);
+  }
+  15% {
+    left: 8px;
+    clip: rect(84px, 235px, 94px, 0px);
+  }
+  20% {
+    left: -10px;
+    clip: rect(154px, 235px, 164px, 0px);
+  }
+  25% {
+    left: -3px;
+    clip: rect(50px, 235px, 60px, 0px);
+  }
+  30% {
+    left: -5px;
+    clip: rect(218px, 235px, 228px, 0px);
+  }
+  35% {
+    left: 2px;
+    clip: rect(185px, 235px, 195px, 0px);
+  }
+  40%, 100% {
+    left: 0;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+</style>
+
+
+<body>
+<section class="main">
+  <div class="inner-content">
+   
+        <div class="glitch">
+<svg width="170" height="99" viewBox="0 0 170 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2H166V99H0V2ZM3 5V96H163V5H3Z" fill="#ED3CCB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H170V97H4V0ZM7 3V94H167V3H7Z" fill="#3AE1ED"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 1H168V98H2V1ZM5 4V95H165V4H5Z" fill="white"/>
+</svg>
+
+
+
+
+    </div>
+      
+  </div>
+</section>
+</body>
+
+<style>
+
+
+  html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+html {
+  line-height: 1;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  display: table;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  line-height: 1em;
+  font-size: 1.2em;
+  color: #BC8034;
+  background: transparent;
+  overflow: hidden;
+}
+@media only screen and (max-width: 320px) {
+  html, body {
+    font-size: 0.96em;
+  }
+}
+
+
+
+
+.main {
+  display: table-cell;
+  position: relative;
+  z-index: 1;
+}
+.main .inner-content {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.main .inner-content h1 {
+  margin: 0 0 1em;
+}
+.main .inner-content img {
+  max-width: 100%;
+  max-height: 250px;
+}
+
+</style>
+
+
+<script type="text/javascript">
+((d, w) => {
+  
+  const container = d.querySelector('.glitch');
+
+  container.appendChild(container.firstElementChild.cloneNode(true));
+  container.appendChild(container.firstElementChild.cloneNode(true));
+  container.appendChild(container.firstElementChild.cloneNode(true));
+  container.appendChild(container.firstElementChild.cloneNode(true));
+  
+})(document, window)
+</script>
