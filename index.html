@@ -21,15 +21,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
-    <link href="css/estilos.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link rel="stylesheet" type="text/css" href="css/grid.css" />
-    <link rel="stylesheet" id="aststyle-css" href="css/portafolio.css" type="text/css" media="all">
 
     <!-- Facebook Open Graph -->
     <meta property="og:url" content="http://lorspi.com/" />
@@ -63,209 +55,49 @@
   </head>
   <body>
 
-<div id="wrapper">
+<figure class='full'>
+  <iframe width="560" height="315" src="https://bento.me/lorspi" frameborder="0" allowfullscreen></iframe>
+</figure>
 
-<!-- ///////////////////////////// Portada ///////////////////////////// -->
+<style>
+  *, *:after, *:before {
+  box-sizing: inherit;
+}
+* {margin:0;padding:0;border: 0 none; position: relative;}
+:root { 
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  font-family: 'Open Sans', Sans-Serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  height: 100vh;
+}
+.full {
+  display: grid;
+  grid-template-areas: 'soloyo';
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+.full iframe {
+  grid-area: soloyo;
+  width: inherit;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  min-width: 100vw;
+  min-height: 100%;
+}
 
-<div class="seccion" id="portada">
-  <div class="container scroll">
-
-    <div class="row">
-
-        <a href="#portada" id="logo" class="desplazar"><img src="img/dibujo-animado.svg"></a>
-        <div id="nombre">Juan Pablo Pérez</div>
-        <div id="dmi">Diseñador de Experiencias</div>
-        <br><br><br>
-
-        <nav id="menu" class="nav">         
-            <ul>
-              <li>
-                <a href="#portafolio" class="desplazar">
-                  <span class="icon">
-                    <i aria-hidden="true" class="icon-brush"></i>
-                  </span>
-                  <span>Mi portafolio</span>
-                </a>
-              </li>
-              <li>
-                <a href="#quiensoy" class="desplazar">
-                  <span class="icon">
-                    <i aria-hidden="true" class="icon-user"></i>
-                  </span>
-                  <span>Mi perfil</span>
-                </a>
-              </li>
-              <li>
-                <a href="#contacto" class="desplazar">
-                  <span class="icon">
-                    <i aria-hidden="true" class="icon-paperplane"></i>
-                  </span>
-                  <span>Contactame</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-      </div>
-
-    </div>
-</div>
-
-<!-- ///////////////////////////// Portafolio ///////////////////////////// -->
-
-<div class="ss-style-doublediagonal seccion" id="portafolio">
-  <div class="container-fluid">
-    <div class="row">
-
-      <h1>Portafolio</h1>
-      <p class="lead">Te presento mis últimos trabajos. Podes verlos todos en mi <a href="https://www.behance.net/lorspi" target="_blank">perfil de Behance.</a></p>
-
-        <main id="archive-main" class="clearfix m-page scene_element scene_element--fadeinright topush">
-          <section id="projects"></section>
-        </main>
-
-      
-        <div class="col-md-12">
-        <br><br><br>
-        <a href="https://www.behance.net/lorspi" target="_blank" class="boton">Conocé todos mis trabajos</a>
-        </div>
-    </div>
-
-    </div> 
-
-    <!--<div class="flechas"><a href="#portada" class="icon-arrow-up desplazar"></a><br><br><a href="#contacto" class="icon-arrow-down2 desplazar"></a></div>-->
-
-</div>
-
-<svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" >
-        <path id="trianglePath1" d="M0 0 L50 100 L100 0 Z" />
-        <path id="trianglePath2" d="M50 100 L100 40 L100 0 Z" />
-      </svg>
-
-<!-- ///////////////////////////// Quien soy ///////////////////////////// -->
-
-<div class="seccion" id="quiensoy">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-4 col-sm-3 perfil-foto">
-        <img class="img-circle" src="img/perfil.jpg">
-        <br><br>
-      </div>
-
-      <div class="col-md-8 col-sm-8 perfil-texto">
-
-      <h1>Soy Juan Pablo</h1>
-      <p class="lead">Diseñador de Medios Interactivos de la Universidad Icesi</p>
-
-      <p class="lead">
-       Diseñador de experiencia de usuario. Tengo más de 5 años de experiencia creando interfaces de usuario para Wep y Apps. Me apasiona participar del proceso integro de creación de producto digital desde conocer y empatizar con los usuarios hasta la entrega del producto implementado. Disfruto mucho de compartir conocimientos e ideas con un equipo de trabajo multidisciplinario.
-       <br><br>
-       Soy aficionado a la fotografía. A veces me gusta experimentar con texturas planos, colores y sentimientos.
-      </p>
-
-      <a href="http://lorspi.com/hojadevida/JuanPabloPerez-HojaDeVida-Web.pdf" target="_blank" class="boton">Mi hoja de vida</a>
-      <a href="http://co.linkedin.com/in/lorspi/" target="_blank" class="boton">LinkedIn</a>
-
-      </div>
-
-
-      <div class="col-md-12">&nbsp;</div>
-
-    </div>
-  </div> 
-</div>
-
-<!--
-<svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-  <path d="M0 0 L50 100 L100 0 Z"></path>
-</svg>
--->
-<svg version="1.1" id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-   y="0px" width="100%" height="100" viewBox="0 0 960 100" preserveAspectRatio="none">
-<path d="M960,100L480,1.961L0,100H960z"/>
-</svg>
-
-<!-- ///////////////////////////// Contacto ///////////////////////////// -->
-
-<div class="seccion" id="contacto">
-  <div class="container">
-
-      <h1>Contactame</h1>
-      <p class="lead">Escribime un correo electrónico a: <a href="mailto://juan.perez@lorspi.com" target="_blank">juan.perez@lorspi.com</a> ó encontrame en las redes sociales:</p>
-
-      <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5c">
-          <a href="http://be.net/lorspi" target="_blank" class="hi-icon icon-behance">Behance</a>
-          <a href="http://instagr.am/lorspi" target="_blank" class="hi-icon icon-instagram">Instagram</a>
-          <a href="http://co.linkedin.com/in/lorspi/" target="_blank" class="hi-icon icon-linkedin">Linkedin</a>
-          <a href="http://flickr.com/photos/lorspi/" target="_blank" class="hi-icon icon-flickr">Flickr</a>
-        </div>
-
-      <div class="col-md-11">&nbsp;</div>
-
-    </div> 
-</div>
-
-</div>
-
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/behance.js"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46749577-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-46749577-1');
-    </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(53745595, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
-
-
-      // Attach listener to DOM Loaded
-      window.addEventListener( 'DOMContentLoaded', setFavicon );
-
-      // Set specific favicon if browser is in dark mode
-      function setFavicon() {
-
-          if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches )
-          {
-              const favicon = document.querySelector('[data-dark]');
-
-              // No icon found
-              if ( ! favicon )
-              {
-                  return;
-              }
-
-              // Dark version available
-              if ( favicon.dataset.dark )
-              {
-                  favicon.href = favicon.dataset.dark;
-              }
-          }
-      }
-    </script>
-    <!--<noscript><div><img src="https://mc.yandex.ru/watch/53745595" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+div {
+  height: 100vh;
+}
+</style>
 
   </body>
 </html>
