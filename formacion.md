@@ -16,7 +16,7 @@ Bachiller académico
 ### CECEP
 
 Noviembre de 2006\
-Curso de diseño y creación de Páginas  Web
+Curso de diseño y creación de Páginas Web
 {% endstep %}
 
 {% step %}
@@ -52,8 +52,42 @@ Laboratorio de emprendimiento en tecnologías móviles
 
 Enero de 2021\
 Experiencia de usuario (UX) escencial
+
+***
+
+Enero de 2021\
+Experiencia de usuario (UX) avanzado
+
+***
+
+Enero de 2021\
+Diseño de interfaz (UI) avanzado
+
+***
+
+Enero de 2021\
+SCRUM (Varios certificados)
+
+***
+
+Enero de 2021\
+Liderazgo creativo
+
+***
+
+Enero de 2021\
+Gestión de proyectos
+
+***
+
+Enero de 2021\
+Design Thinking
 {% endstep %}
 
+{% step %}
+### Universidad Autónoma de Occidente
 
+Julio de 202\
+Diplomado Marketing Digital
+{% endstep %}
 {% endstepper %}
-
