@@ -87,7 +87,7 @@ Design Thinking
 {% step %}
 ### Universidad Autónoma de Occidente
 
-Julio de 202\
+Julio de 2021\
 Diplomado Marketing Digital
 {% endstep %}
 {% endstepper %}
