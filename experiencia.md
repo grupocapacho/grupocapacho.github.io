@@ -21,7 +21,14 @@ Monitor de Desarrollo
 {% endstep %}
 
 {% step %}
-###
+### Universidad ICESI
+
+Septiembre de 2007 – Julio de 2007\
+Monitor de E-learning
+
+> Diseñador Web de los servicios ofrecidos por el departamento de E-learning.
+
+
 
 
 {% endstep %}
