@@ -1,5 +1,6 @@
 ---
 icon: sparkles
+hidden: true
 ---
 
 # Datos de interés
