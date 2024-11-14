@@ -1,5 +1,6 @@
 ---
 icon: sparkles
+hidden: true
 ---
 
 # Mas información
