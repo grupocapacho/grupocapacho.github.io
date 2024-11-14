@@ -1,5 +1,5 @@
 ---
-icon: sparkles
+icon: memo-circle-info
 hidden: true
 ---
 
