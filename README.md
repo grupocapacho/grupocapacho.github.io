@@ -26,7 +26,8 @@ Considero que cada disciplina desempeña un papel fundamental en el proceso crea
 
 ### Habilidades
 
-* UX/UI avanzado
+* UX avanzado
+* UI avanzado
 * Branding intermedio
 * Fotografía intermedio
 * Edición de video intermedio
