@@ -1,0 +1,144 @@
+<html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Términos y condiciones</title>
+
+  <link rel="icon" type="image/png" href="../img/favicon-oscuro-96.png" data-dark="../img/favicon-claro-96.png" />
+  <link href="https://lorspi.com/img/57.png" rel="apple-touch-icon" />
+  <link href="https://lorspi.com/img/76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="https://lorspi.com/img/120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="https://lorspi.com/img/152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="https://lorspi.com/img/180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="https://lorspi.com/img/192.png" rel="icon" sizes="192x192" />
+  <link href="https://lorspi.com/img/128.png" rel="icon" sizes="128x128" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 6px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    @media (max-width: 700px) {
+      .container {
+        /*max-width: 80%;*/
+        margin: 16px;
+        padding: 24px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="dibujo-animado.svg" alt="Logo">
+  </div>
+
+  <!-- WHITE CARD -->
+  <div class="container">
+    <h1>Mi amistad no tiene condiciones*</h1>
+
+    <p>El beneficio será válido durante treinta (30) días a partir de su fecha de inicio, siempre que se presente el cupón y sujeto a la disponibilidad del emisor.</p>
+    <p>No aplica para experiencias que vulneren leyes locales, afecten la integridad física, emocional, espiritual o ética del emisor, ni para actividades que vayan en contra de su comodidad.</p>
+    <p>El beneficio es de uso único y no es acumulable con otros eventos o promociones.</p>
+    <p>No es transferible ni redimible por dinero en efectivo.</p>
+    <p>Para dudas, solicitudes, quejas o reclamos, puede comunicarse al correo: <strong><span class="nadaquever"></span></strong></p>
+  </div>
+
+  <script>
+    const parte1 = "pqrs";
+    const parte2 = "lorspi";
+    const parte3 = "com";
+
+    const email = `${parte1}@${parte2}.${parte3}`;
+
+    document.querySelectorAll('.nadaquever').forEach(el => {
+      el.textContent = email;
+    });
+  </script>
+
+  <script>
+    // Attach listener to DOM Loaded
+    window.addEventListener( 'DOMContentLoaded', setFavicon );
+
+    // Set specific favicon if browser is in dark mode
+    function setFavicon() {
+
+    if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches )
+    {
+        const favicon = document.querySelector('[data-dark]');
+
+        // No icon found
+        if ( ! favicon )
+        {
+            return;
+        }
+
+        // Dark version available
+        if ( favicon.dataset.dark )
+        {
+            favicon.href = favicon.dataset.dark;
+        }
+    }
+}
+</script>
+
+</body>
+</html>
